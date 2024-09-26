@@ -1,0 +1,81 @@
+/* Add this CSS to style the layout */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .community-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 40px;
+    padding-top: 100px; /* Adjust based on your navbar height */
+
+  }
+
+  
+  /* Post form styling */
+  .post-form {
+    flex: 1;
+    max-width: 40%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .post-form h2 {
+    margin-bottom: 20px;
+  }
+  
+  /* Posts section styling */
+  .posts-section {
+    flex: 2;
+    max-width: 55%;
+  }
+  
+  .posts-section h2 {
+    margin-bottom: 20px;
+  }
+  
+  .posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Individual post card styling */
+  .post-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #fff;
+  }
+  
+  .post-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .alert {
+    margin-bottom: 15px;
+  }
+  
+  /* Responsive design for mobile view */
+  @media (max-width: 768px) {
+    .community-container {
+      flex-direction: column;
+    }
+  
+    .post-form, .posts-section {
+      max-width: 100%;
+    }
+  }
+  

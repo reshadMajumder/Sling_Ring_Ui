@@ -1,0 +1,75 @@
+/* Chat.css */
+.chat-container {
+    background-color: #6093c759; /* Light background color */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin-left: 20px; /* Space between details and chat */
+    width: 520px; /* Adjusted width */
+    max-height: 400px; /* Limit the height of the chat */
+    overflow-y: auto; /* Allow scrolling */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    display: flex;
+    flex-direction: column; /* Flex layout for proper alignment */
+}
+
+.chat-header {
+    background-color: #007bff; /* Header background color */
+    color: white; /* Text color */
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px; /* Space below the header */
+}
+
+.messages {
+    flex-grow: 1; /* Allow messages to grow and fill space */
+    margin-bottom: 10px;
+    overflow-y: auto; /* Enable scrolling for messages */
+}
+
+.message {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners */
+    max-width: 80%; /* Limit message width */
+}
+
+.message.user {
+    background-color: #007bff; /* User message background */
+    color: white; /* User message text color */
+    margin-left: auto; /* Align user messages to the right */
+}
+
+.message.bot {
+    background-color: #e2e3e5; /* Bot message background */
+    color: black; /* Bot message text color */
+}
+
+.chat-input {
+    display: flex;
+    margin-top: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px; /* Increased padding for comfort */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 8px; /* Space between input and button */
+}
+
+.chat-input button {
+    padding: 10px 16px; /* Increased button size */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.chat-input button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
