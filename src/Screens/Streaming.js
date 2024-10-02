@@ -1,6 +1,5 @@
 import React from 'react';
 import './Streaming.css';
-import spaceBackground from "../assets/images/space.jpg";
 import B_URL from '../Services/Api';
 
 const StreamingPlatforms = () => {
@@ -27,7 +26,7 @@ const StreamingPlatforms = () => {
   
 
   return (
-    <div className="streaming-container"style={{ backgroundImage: `url(${spaceBackground})` }}>
+    <div className="streaming-container">
       <h2>Available Streaming Platforms</h2>
       <div className="platforms-list">
         {platforms.map((platform) => (

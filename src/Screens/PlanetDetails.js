@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import spaceBackground from "../assets/images/space.jpg";
 import Chat from '../components/Chat'; // Import the Chat component
 
 const PlanetDetails = () => {
@@ -14,7 +13,7 @@ const PlanetDetails = () => {
             try {
                 setLoading(true); // Set loading to true before fetching
                 const response = await axios.get(
-                    'https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=cumulative&format=json'
+                    'http://127.0.0.1:8000/api/exoplanets/'
                 );
                 // Filter for the selected planet by its kepid
                 const selectedPlanet = response.data.find(p => p.kepid === parseInt(id));
@@ -31,7 +30,7 @@ const PlanetDetails = () => {
 
     if (loading) {
         return (
-            <div className="home-background" style={{ backgroundImage: `url(${spaceBackground})` }}>
+            <div className="home-background" >
                 <h3>Loading Planet Details...</h3>
             </div>
         ); // Loading state
@@ -39,7 +38,7 @@ const PlanetDetails = () => {
 
     if (!planet) {
         return (
-            <div className="home-background" style={{ backgroundImage: `url(${spaceBackground})` }}>
+            <div className="home-background" >
                 <h3>Loading Planet not found...</h3>
             </div>
         ); // No planet found state
@@ -47,7 +46,7 @@ const PlanetDetails = () => {
 
     // Display structured information
     return (
-        <div className="home-background" style={{ backgroundImage: `url(${spaceBackground})` }}>
+        <div className="home-background" >
             <div className="container mt-5 d-flex">
                 <div className="row justify-content-center">
                 <div className="details-container">

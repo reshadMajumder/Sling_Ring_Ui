@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import './Home.css';
-import spaceBackground from "../assets/images/space.jpg";
 import { Link } from "react-router-dom";
 
 const HomePage = () => {
@@ -12,7 +11,7 @@ const HomePage = () => {
     const fetchExoplanets = async () => {
       try {
         const response = await axios.get(
-          'https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=cumulative&format=json'
+          'http://127.0.0.1:8000/api/exoplanets/'
         );
         console.log("Fetched Exoplanets Data: ", response.data); // Debugging to ensure data is received
         setExoplanets(response.data.slice(0, 10)); // Limit to first 10 exoplanets for demo purposes
@@ -25,7 +24,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="home-background" style={{ backgroundImage: `url(${spaceBackground})` }}>
+    <div className="home-background">
       <div className="container">
         <div className="row mt-5 pt-5">
           {exoplanets.length > 0 ? (

@@ -30,13 +30,13 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/about" className="text-white">
-                  About Us
+                <a href="/streaming" className="text-white">
+                  Streaming
                 </a>
               </li>
               <li>
-                <a href="/contact" className="text-white">
-                  Contact
+                <a href="/comunity" className="text-white">
+                Comunity
                 </a>
               </li>
             </ul>
@@ -45,22 +45,8 @@ const Footer = () => {
           {/* Footer Column 3 - Contact */}
           <div className="col-lg-4 col-md-12 col-sm-12 mb-4">
             <h5>Contact Us</h5>
-            <p>Email: info@exoplanetexplorer.com</p>
-            <p>Phone: +1 555-555-5555</p>
-            <p>
-              Follow us: 
-              <a href="https://twitter.com/nasa" className="text-white mx-2">
-                Twitter
-              </a>
-              |
-              <a href="https://www.facebook.com/NASA" className="text-white mx-2">
-                Facebook
-              </a>
-              |
-              <a href="https://www.instagram.com/nasa" className="text-white mx-2">
-                Instagram
-              </a>
-            </p>
+            <p>Team Exoverse</p>
+
           </div>
         </div>
 

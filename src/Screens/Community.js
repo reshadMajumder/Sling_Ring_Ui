@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import B_URL from '../Services/Api';
 import './comunity.css';
-import spaceBackground from "../assets/images/space.jpg";
 
 
 
@@ -96,7 +95,7 @@ const Community = () => {
 
   return (
 
-    <div className="community-container" style={{ backgroundImage: `url(${spaceBackground})` }}>
+    <div className="community-container" >
       <div className="post-form">
         <h2>Create a Post</h2>
         {/* Display errors if any */}
@@ -133,7 +132,7 @@ const Community = () => {
       {/* Display all community posts */}
       <div className="posts-section">
         <h2 style={{ backgroundColor: '#0000FF', color: 'white', padding: '10px', textAlign: 'center' }}>Community Posts</h2>
-        <div className="posts-list" style={{ backgroundColor: '#E6F3FF', padding: '20px' }}>
+        <div className="posts-list" style={{  padding: '20px' }}>
           {posts.map((post) => (
             <div className="post-card" key={post.id}>
               <div className="post-content">

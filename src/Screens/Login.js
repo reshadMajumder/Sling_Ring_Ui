@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import B_URL from '../Services/Api';
-import spaceBackground from "../assets/images/space.jpg";
 
 const Login = () => {
   const [identifier, setIdentifier] = useState('');
@@ -30,7 +29,7 @@ const Login = () => {
   };
 
   return (
-    <div className="home-background" style={{ backgroundImage: `url(${spaceBackground})` }}>
+    <div className="home-background" >
       <div className="container">
         <div className="section-authentication-signin d-flex align-items-center justify-content-center my-5">
           <div className="row row-cols-1 row-cols-xl-2">

@@ -41,7 +41,25 @@ const Chat = ({ planet }) => {
         - Stellar Radius: ${planet.koi_srad} Solar radii
         - Right Ascension: ${planet.ra_str}
         - Declination: ${planet.dec_str}
-        Answer questions based on these details. keep the answer show and precise`;
+        - Koi Score: ${planet.koi_score}
+        - Koi Period Error: +${planet.koi_period_err1} / ${planet.koi_period_err2}
+        - Impact Parameter: ${planet.koi_impact}
+        - Impact Parameter Error: +${planet.koi_impact_err1} / ${planet.koi_impact_err2}
+        - Transit Duration: ${planet.koi_duration} hours
+        - Transit Duration Error: +${planet.koi_duration_err1} / ${planet.koi_duration_err2}
+        - Transit Depth: ${planet.koi_depth} ppm
+        - Transit Depth Error: +${planet.koi_depth_err1} / ${planet.koi_depth_err2}
+        - Radius Error: +${planet.koi_prad_err1} / ${planet.koi_prad_err2} Earth radii
+        - Insolation Error: +${planet.koi_insol_err1} / ${planet.koi_insol_err2} Earth units
+        - Model SNR: ${planet.koi_model_snr}
+        - TCE Planet Number: ${planet.koi_tce_plnt_num}
+        - TCE Delivery Name: ${planet.koi_tce_delivname}
+        - Stellar Effective Temperature Error: +${planet.koi_steff_err1} / ${planet.koi_steff_err2} Kelvin
+        - Stellar Surface Gravity (log g): ${planet.koi_slogg}
+        - Stellar Surface Gravity Error: +${planet.koi_slogg_err1} / ${planet.koi_slogg_err2}
+        - Stellar Radius Error: +${planet.koi_srad_err1} / ${planet.koi_srad_err2} Solar radii
+        - Kepler Magnitude: ${planet.koi_kepmag}
+        Answer questions based on these details. Keep the answer short and precise`;
 
         // Send the message to Gemini API
         try {
