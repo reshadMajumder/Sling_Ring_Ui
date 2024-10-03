@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import './Home.css';
 import { Link } from "react-router-dom";
+import B_URL from '../Services/Api';
 
 const HomePage = () => {
   const [exoplanets, setExoplanets] = useState([]);
@@ -11,7 +12,9 @@ const HomePage = () => {
     const fetchExoplanets = async () => {
       try {
         const response = await axios.get(
-          'http://127.0.0.1:8000/api/exoplanets/'
+          // 'http://127.0.0.1:8000/api/exoplanets/'
+          `${B_URL}/api/exoplanets/`
+      
         );
         console.log("Fetched Exoplanets Data: ", response.data); // Debugging to ensure data is received
         setExoplanets(response.data.slice(0, 10)); // Limit to first 10 exoplanets for demo purposes

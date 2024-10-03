@@ -20,7 +20,7 @@ function Lab() {
             <h3>Submit Data</h3>
             <form onSubmit={handleSubmit}>
               <div className="mb-3">
-                <label className="form-label">Name</label>
+                <label className="form-label">Planet's radius</label>
                 <input
                   type="text"
                   className="form-control"
@@ -30,7 +30,7 @@ function Lab() {
                 />
               </div>
               <div className="mb-3">
-                <label className="form-label">Coordinates</label>
+                <label className="form-label"> Orbital period</label>
                 <input
                   type="text"
                   className="form-control"
@@ -40,7 +40,7 @@ function Lab() {
                 />
               </div>
               <div className="mb-3">
-                <label className="form-label">KIP</label>
+                <label className="form-label">Magnitude</label>
                 <input
                   type="text"
                   className="form-control"

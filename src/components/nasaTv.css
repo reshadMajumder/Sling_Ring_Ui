@@ -1,0 +1,17 @@
+.iframe-container {
+    width: 500px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    transition: transform 0.3s ease; /* Smooth hover effect */ /* Center align the container */
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 600px) {
+    .iframe-container {
+      width: 100%;  /* Make iframe take full width */
+      height: auto; /* Adjust height accordingly */
+    }
+  }
+  

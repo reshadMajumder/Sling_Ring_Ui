@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import Chat from '../components/Chat'; // Import the Chat component
+import B_URL from '../Services/Api';
 
 const PlanetDetails = () => {
     const { id } = useParams(); // Get planet ID from URL
@@ -13,7 +14,9 @@ const PlanetDetails = () => {
             try {
                 setLoading(true); // Set loading to true before fetching
                 const response = await axios.get(
-                    'http://127.0.0.1:8000/api/exoplanets/'
+                    // 'http://127.0.0.1:8000/api/exoplanets/'
+                    `${B_URL}/api/exoplanets/`
+
                 );
                 // Filter for the selected planet by its kepid
                 const selectedPlanet = response.data.find(p => p.kepid === parseInt(id));
@@ -65,7 +68,6 @@ const PlanetDetails = () => {
                     </div>
                 </div>
                 </div>
-                {/* Render Chat Component */}
                 <Chat planet={planet} />
             </div>
         </div>

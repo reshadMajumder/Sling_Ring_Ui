@@ -1,61 +1,29 @@
-/* StreamingPlatforms.css */
+/* Container styling for the StreamingPlatforms component */
 .streaming-container {
-    text-align: center;
-    padding: 20px;
-    padding-top: 150px; /* Adjust based on your navbar height */
-    min-height: 100vh;
+  padding: 10px;
+  text-align: center;
+}
 
+/* Flex container to arrange NasaTv components in a row */
+.streaming-row {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  justify-content: center; /* Center the items horizontally */
+}
+
+
+
+/* Responsive adjustments */
+@media screen and (max-width: 1200px) {
+  .iframe-container {
+    width: 45%; /* Shrinks the width when screen size is below 1200px */
+    height: auto;
   }
-  
-  h2 {
-    margin-bottom: 30px;
-    font-size: 24px;
-    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .iframe-container {
+    width: 100%; /* Takes full width for mobile screens */
+    height: auto;
   }
-  
-  .platforms-list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .platform-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    width: 180px;
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .platform-card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .platform-logo {
-    width: 100px;
-    margin-bottom: 15px;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  button {
-    width: 100%;
-    font-size: 16px;
-    padding: 10px;
-  }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .platforms-list {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-  
+}
