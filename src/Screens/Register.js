@@ -32,7 +32,6 @@ const Register = () => {
       setError('Registration failed. Please try again.');
     }
   };
-//sdkljfkjdsjfkldsjkdjgkdf gfdklgjjfddafjsdfjhsdjkhfjksdjgdsjagksddafhjkds
   return (
     <div className="home-background" >
       <div className="container">

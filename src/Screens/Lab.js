@@ -9,7 +9,7 @@ function Lab() {
   // Simulate a result calculation (you can replace this with an actual calculation or API call)
   const handleSubmit = (e) => {
     e.preventDefault();
-    setResult(`Name: ${name}, its a super earth`);
+    setResult(`Predicted planet type: its a super earth`);
   };
 
   return (

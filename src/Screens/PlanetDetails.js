@@ -35,6 +35,9 @@ const PlanetDetails = () => {
         return (
             <div className="home-background" >
                 <h3>Loading Planet Details...</h3>
+                <div className="spinner-border text-light" role="status">
+                  <span className="sr-only"></span>
+                </div>
             </div>
         ); // Loading state
     }
@@ -42,7 +45,7 @@ const PlanetDetails = () => {
     if (!planet) {
         return (
             <div className="home-background" >
-                <h3>Loading Planet not found...</h3>
+                <h3>Loading Planet not found... please reload the page or try again</h3>
             </div>
         ); // No planet found state
     }
